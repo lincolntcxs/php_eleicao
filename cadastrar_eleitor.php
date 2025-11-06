@@ -40,7 +40,7 @@ include 'includes/header.php';
                 </div>
                 
                 <button type="submit" class="submit-btn">Cadastrar Eleitor</button>
-                <a href="services.php" class="cancel-btn">Cancelar</a>
+                <a href="servicos.php" class="cancel-btn">Cancelar</a>
             </form>
         </div>
     </div>

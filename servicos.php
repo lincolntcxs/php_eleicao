@@ -33,6 +33,13 @@ $servicos = [
         'texto_botao' => 'Ver Agora' // TEXTO DIFERENTE
     ],
     [
+        'icone' => 'fa fa-pie-chart',
+        'titulo' => 'Resultado Votação',
+        'descricao' => 'Exibe resultado da eleição', 
+        'link' => 'resultado.php', // NOVO LINK
+        'texto_botao' => 'Ver resultados' // TEXTO DIFERENTE
+    ],
+    [
         'icone' => 'fa fa-graduation-cap',
         'titulo' => 'Votar',
         'descricao' => 'Vote em um reitor e vice',
@@ -44,8 +51,7 @@ $servicos = [
 
 <section class="page-header">
     <div class="container">
-        <h1>Nossos Serviços</h1>
-        <p>Soluções completas para seu negócio</p>
+        <h1>Serviços disponíveis</h1>
     </div>
 </section>
 
