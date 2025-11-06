@@ -215,7 +215,7 @@ foreach ($resultados_reitor as $voto) {
         </div>
 
         <div class="acoes">
-            <a href="services.php" class="btn secondary">Voltar aos Serviços</a>
+            <a href="servicos.php" class="btn secondary">Voltar aos Serviços</a>
             <button onclick="window.print()" class="btn">Imprimir Resultados</button>
             <a href="votar.php" class="btn">Registrar Novo Voto</a>
         </div>

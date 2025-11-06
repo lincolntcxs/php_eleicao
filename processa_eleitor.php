@@ -28,10 +28,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $conn = conectarBanco();
         if($conn){
             try{
-                $sql = "INSERT INTO eleitor (nome, idade, sexo, titulo)";
-                $values = "VALUES (:nome, :idade, :sexo, :titulo)";
-
-                $sql .= ") " . $values . ")";
+                $sql = "INSERT INTO eleitor (nome, idade, sexo, titulo) VALUES (:nome, :idade, :sexo, :titulo)";
 
                 $stmt = $conn->prepare($sql);
                 $stmt->bindParam(':nome', $nome);
@@ -101,9 +98,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <?php endif; ?>
 
                 <div class="acoes">
-                    <a href="cadastrar_eleitor.php" class= "btn">Cadastrar outro eleitor</a>
+                    <a href ="cadastrar_eleitor.php" class= "btn">Cadastrar outro eleitor</a>
                     <a href ="servicos.php" class="btn secondary">Voltar aos serviços</a>
-                    <a href ="listar_eleitores.php">Ver todos os eleitores</a>
+                    <a href ="listar_eleitores.php" class = "btn secondary">Ver todos os eleitores</a>
                 </div>
             </div>
         </div>

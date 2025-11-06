@@ -49,9 +49,12 @@ $servicos = [
 ];
 ?>
 
-<section class="page-header">
+<section class="page-header fat-simple-header">
     <div class="container">
-        <h1>Serviços disponíveis</h1>
+        <div class="header-content">
+            <h1>Serviços Disponíveis</h1>
+            <p>Todas as funcionalidades do sistema eleitoral</p>
+        </div>
     </div>
 </section>
 
