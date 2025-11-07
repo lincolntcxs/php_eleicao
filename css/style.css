@@ -555,6 +555,7 @@ footer {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .acoes .btn {
@@ -1011,6 +1012,158 @@ footer {
 }
 
 /* Controles do carrossel */
+/* ===== CARROSSEL CORRIGIDO ===== */
+.carrossel-container {
+    position: relative;
+    margin: 2rem 0 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel {
+    position: relative;
+    height: 400px;
+}
+
+.carrossel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Mudei para display none */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carrossel-item.active {
+    display: block; /* Mostra apenas o active */
+    opacity: 1;
+}
+
+.carrossel-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.carrossel-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-link:hover img {
+    transform: scale(1.05);
+}
+
+.carrossel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 2rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.carrossel-link:hover .carrossel-overlay {
+    transform: translateY(0);
+}
+
+.carrossel-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.carrossel-btn {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Controles do carrossel */
+/* ===== CARROSSEL CORRIGIDO ===== */
+.carrossel-container {
+    position: relative;
+    margin: 2rem 0 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel {
+    position: relative;
+    height: 550px;
+}
+
+.carrossel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Mudei para display none */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carrossel-item.active {
+    display: block; /* Mostra apenas o active */
+    opacity: 1;
+}
+
+.carrossel-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.carrossel-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-link:hover img {
+    transform: scale(1.05);
+}
+
+.carrossel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 2rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.carrossel-link:hover .carrossel-overlay {
+    transform: translateY(0);
+}
+
+.carrossel-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.carrossel-btn {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Controles do carrossel */
 .carrossel-prev,
 .carrossel-next {
     position: absolute;
@@ -1067,7 +1220,6 @@ footer {
     background: white;
     transform: scale(1.2);
 }
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .carrossel {
@@ -1101,5 +1253,276 @@ footer {
     
     .carrossel-overlay h3 {
         font-size: 1.1rem;
+    }
+}
+
+/* ===== CURSO EM FLUXO CONTÍNUO ===== */
+.curso-fluxo {
+    padding: 40px 0 60px;
+    background: #f8fafc;
+}
+
+.curso-conteudo-fluxo {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: 8px;
+}
+
+.curso-conteudo-fluxo > p:first-of-type {
+    background: #f8fafc;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #2563eb;
+    margin-bottom: 2.5rem;
+    color: #4b5563;
+    font-size: 1.05rem;
+}
+
+.curso-conteudo-fluxo h2 {
+    color: #1e293b;
+    margin: 2.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.curso-conteudo-fluxo h2:first-of-type {
+    margin-top: 0;
+}
+
+.curso-conteudo-fluxo p {
+    color: #6b7280;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.curso-conteudo-fluxo ul {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.curso-conteudo-fluxo li {
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.curso-conteudo-fluxo li strong {
+    color: #1e293b;
+}
+
+.curso-acoes-fluxo {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .curso-conteudo-fluxo {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .curso-acoes-fluxo {
+        flex-direction: column;
+    }
+    
+    .curso-acoes-fluxo .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-conteudo-fluxo {
+        padding: 1.5rem;
+    }
+    
+    .curso-conteudo-fluxo > p:first-of-type {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== PÁGINA DE CURSOS ===== */
+.cursos-graduacao {
+    padding: 60px 0;
+    background: #f8fafc;
+}
+
+.estatisticas-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.curso-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.curso-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.curso-imagem {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.curso-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.curso-card:hover .curso-imagem img {
+    transform: scale(1.05);
+}
+
+.curso-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(37, 99, 235, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.curso-card:hover .curso-overlay {
+    opacity: 1;
+}
+
+.saiba-mais {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.curso-info {
+    padding: 1.5rem;
+}
+
+.curso-info h3 {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.curso-descricao {
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.curso-detalhes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.curso-duracao,
+.curso-turno {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Informações Adicionais */
+.info-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2563eb;
+}
+
+.info-card h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .estatisticas-cursos {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-cursos {
+        grid-template-columns: 1fr;
+    }
+    
+    .curso-detalhes {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-card {
+        margin: 0 -20px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
     }
 }
