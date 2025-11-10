@@ -21,7 +21,7 @@ include 'includes/header.php';
             <strong>Titulação:</strong> Administrador Portuário <br>
             <strong>Duração:</strong> 8 semestres <br>
             <strong>Turno:</strong> Matutino/Noturno <br>
-            <strong>Vagas:</strong> 60 por semestre 
+            <strong>Vagas:</strong> 60 por semestre <br>
             <strong>Coordenador:</strong> Prof. Dr. João Silva
             
             <h2>Objetivos</h2>
