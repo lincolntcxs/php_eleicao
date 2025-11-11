@@ -84,23 +84,86 @@ $imagens_carrossel = [
                 <?php endforeach; ?>
             </div>
         </div>
-
-        <h2>Nossos Diferenciais</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Inovação</h3>
-                <p>Soluções modernas e eficientes para seu negócio.</p>
+        <!-- Notícias em Destaque -->
+        <div class="noticias-section">
+            <h2>📢 Notícias e Eventos</h2>
+            <div class="noticias-grid">
+                <div class="noticia-card">
+                    <span class="noticia-data">22 JAN 2026</span>
+                    <h3>Inscrições Abertas para o Vestibular 2026</h3>
+                    <p>Processo seletivo com 500 vagas disponíveis</p>
+                    <a href="noticia.php?id=1">Ler mais →</a>
+                </div>
+                <div class="noticia-card">
+                    <span class="noticia-data">20 MAR 2026</span>
+                    <h3>Semana de Tecnologia e Inovação</h3>
+                    <p>Evento com palestras e workshops gratuitos</p>
+                    <a href="eventos.php">Ver programação →</a>
+                </div>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-users"></i>
-                <h3>Equipe Qualificada</h3>
-                <p>Profissionais experientes e dedicados.</p>
+        </div>
+        <!-- Próximos Eventos -->
+        <div class="calendario-section">
+            <h2>📅 Calendário Acadêmico</h2>
+            <div class="eventos-lista">
+                <div class="evento">
+                    <span class="evento-data">01/04 - 15/04</span>
+                    <span class="evento-titulo">Período de Matrícula</span>
+                </div>
+                <div class="evento">
+                    <span class="evento-data">20/04</span>
+                    <span class="evento-titulo">Início do Semestre 2024.1</span>
+                </div>
+                <div class="evento">
+                    <span class="evento-data">25/04</span>
+                    <span class="evento-titulo">Semana de Recepção aos Calouros</span>
+                </div>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-medal"></i>
-                <h3>Qualidade</h3>
-                <p>Compromisso com a excelência em todos os projetos.</p>
+        </div>
+        <!-- Estatísticas Institucionais -->
+        <div class="estatisticas-ufss">
+            <h2> Números da UFSS</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2.000+</div>
+                    <div class="stat-label">Estudantes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Cursos de Graduação</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Professores</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Aprovação no ENADE</div>
+                </div>
+            </div>
+        </div>
+        <!-- Cursos Populares -->
+        <div class="cursos-destaque">
+            <h2>🎓 Cursos em Destaque</h2>
+            <div class="cursos-grid">
+                <div class="curso-destaque">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Ciência da Computação</h3>
+                    <p>Nota 5 no MEC - 8 semestres</p>
+                    <a href="curso_computacao.php">Conhecer →</a>
+                </div>
+                <div class="curso-destaque">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Medicina</h3>
+                    <p>Nota 5 no MEC - 12 semestres</p>
+                    <a href="curso_medicina.php">Conhecer →</a>
+                </div>
+                <div class="curso-destaque">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>Engenharia Civil</h3>
+                    <p>Nota 4 no MEC - 10 semestres</p>
+                    <a href="curso_eng_civil.php">Conhecer →</a>
+                </div>
             </div>
         </div>
     </div>
