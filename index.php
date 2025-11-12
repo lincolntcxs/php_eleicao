@@ -167,6 +167,22 @@ $imagens_carrossel = [
             </div>
         </div>
     </div>
+    <section class="votacao-section">
+    <div class="votacao-container">
+        <h2>🗳️ Vote Agora!</h2>
+        <p>Escaneie o QR Code para acessar a votação diretamente pelo celular</p>
+        
+        <div class="qr-code-container">
+            <img src="imagens/qr-code.png" alt="QR Code para votação" class="qr-code">
+        </div>
+        
+        <div class="votacao-links">
+            <a href="votar.php" class="btn-votar">📱 Votar Agora</a>
+            <p class="ou">ou</p>
+            <p class="instrucao">Aponte a câmera do celular para o QR Code</p>
+        </div>
+    </div>
+</section>
 </section>
 
 <?php include 'includes/footer.php'; ?>

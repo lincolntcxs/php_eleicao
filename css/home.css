@@ -1,0 +1,371 @@
+/* Estatísticas */
+.estatisticas-ufss {
+    background: linear-gradient(135deg, #1e3a8a, #3730a3);
+    color: white;
+    padding: 3rem 0;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+* Cursos Destaque */
+.cursos-destaque {
+    margin: 4rem 0;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.curso-destaque {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.curso-destaque:hover {
+    transform: translateY(-5px);
+}
+
+.curso-destaque i {
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+/* QR Code pequeno e estilizado */
+.qr-code-container {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+
+    margin: 1rem 0;
+}
+
+.qr-code {
+    width: 150px;  /* Tamanho pequeno */
+    height: 150px;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Links e botões */
+.votacao-links {
+    margin-top: 1.5rem;
+}
+
+.btn-votar {
+    display: inline-block;
+    background: #ff6b6b;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-votar:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.ou {
+    margin: 1rem 0;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.instrucao {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .votacao-section {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+    }
+    
+    .qr-code {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .votacao-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Notícias */
+.noticias-section {
+    margin: 4rem 0;
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.noticia-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #2563eb;
+}
+
+.noticia-data {
+    color: #2563eb;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.noticia-card h3 {
+    margin: 0.5rem 0;
+    color: #1e293b;
+}
+
+/* Estatísticas da UFSS */
+.estatisticas-ufss {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.estatisticas-ufss .estatistica-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.estatisticas-ufss .estatistica-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.estatisticas-ufss .estatistica-label {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr 350px;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .estatisticas-ufss {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 40px 0;
+    }
+    
+    .about-text,
+    .about-image {
+        padding: 1rem;
+    }
+    
+    .estatisticas-ufss {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SOBRE A UFSS ===== */
+.about-content {
+    padding: 60px 0;
+    background: #f8fafc;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.about-text h2 {
+    color: #1e293b;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-text h2:first-of-type {
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #6b7280;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text ul {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.about-text li {
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.about-text li strong {
+    color: #2563eb;
+}
+
+.about-image {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.campus-info {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #2563eb;
+}
+
+.campus-info h3 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.campus-info p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Informações Adicionais */
+.info-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2563eb;
+}
+
+.info-card h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .estatisticas-cursos {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-cursos {
+        grid-template-columns: 1fr;
+    }
+    
+    .curso-detalhes {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-card {
+        margin: 0 -20px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+}

@@ -1,5 +1,5 @@
 <?php include 'includes/config.php'; ?>
-<link rel="stylesheet" href="/home/lincoln/Documentos/codigos_vs/projeto_php/css">
+<link rel="stylesheet" href="css/style.css">
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
