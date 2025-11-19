@@ -19,6 +19,13 @@ $servicos = [
         'texto_botao' => 'Cadastrar Agora' // TEXTO DIFERENTE
     ],
     [
+        'icone' => 'fa fa-address-card',
+        'titulo' => 'Cadastrar Aluno',
+        'descricao' => 'Cadastra um novo aluno', 
+        'link' => 'cadastrar_alunos.php', // NOVO LINK
+        'texto_botao' => 'Cadastrar Agora' // TEXTO DIFERENTE
+    ],
+    [
         'icone' => 'fa fa-users',
         'titulo' => 'Eleitores',
         'descricao' => 'Exibe lista de eleitores', 

@@ -21,6 +21,11 @@ include 'includes/header.php';
                 </div>
                 
                 <div class="form-group">
+                    <label for="eleitor">Eleitor *</label>
+                    <input type="text" name="eleitor" required>
+                </div>
+                
+                <div class="form-group">
                     <label for="vice">Vice reitor *</label>
                     <input type="text" id="vice" name="vice" required>
                 </div>

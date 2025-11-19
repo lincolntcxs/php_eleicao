@@ -1,14 +1,15 @@
 <?php
 include 'includes/config.php';
 
-//VERIFICA SE O FOMULÁRIO FOI ENVIADO
+// VERIFICA SE O FORMULÁRIO FOI ENVIADO
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     
-    //RECEBE E VALIDA OS DADOS
+    // RECEBE E VALIDA OS DADOS
     $reitor = trim($_POST['reitor']);
     $vice = trim($_POST['vice']);
+    $eleitor = trim($_POST['eleitor']);
 
-    //VALIDACOES BASICAS
+    // VALIDAÇÕES BÁSICAS
     $erros = [];
     if(empty($reitor)){
         $erros[] = "Reitor é obrigatório";
@@ -18,32 +19,61 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $erros[] = "Vice é obrigatório";
     }
 
+    if(empty($eleitor)){
+        $erros[] = "É preciso escolher um eleitor";
+    }
+
     if(empty($erros)){
         $conn = conectarBanco();
         if($conn){
             try{
-                $sql = "INSERT INTO voto (reitor, vice) VALUES (:reitor, :vice)";
-
-                $stmt = $conn->prepare($sql);
-                $stmt->bindParam(':reitor', $reitor);
-                $stmt->bindParam(':vice', $vice);
-
-                if($stmt->execute()){
-                    $sucesso = "Voto registrado com sucesso!";
-                    $id_voto = $conn->lastInsertId();
+                // INICIAR TRANSAÇÃO
+                $conn->beginTransaction();
+                
+                // 1. PRIMEIRO: INSERIR O VOTO
+                $sql_voto = "INSERT INTO voto (reitor, vice) VALUES (:reitor, :vice)";
+                $stmt_voto = $conn->prepare($sql_voto);
+                $stmt_voto->bindParam(':reitor', $reitor);
+                $stmt_voto->bindParam(':vice', $vice);
+                
+                if($stmt_voto->execute()){
+                    // 2. SEGUNDO: ATUALIZAR O ELEITOR
+                    $sql_eleitor = "UPDATE eleitor SET votou = 1 WHERE nome = :eleitor";
+                    $stmt_eleitor = $conn->prepare($sql_eleitor);
+                    $stmt_eleitor->bindParam(':eleitor', $eleitor);
+                    
+                    if($stmt_eleitor->execute()){
+                        // Verificar se algum registro foi atualizado
+                        if($stmt_eleitor->rowCount() > 0){
+                            $conn->commit();
+                            $sucesso = "Voto registrado com sucesso! Eleitor atualizado.";
+                        } else {
+                            $conn->rollBack();
+                            $erros[] = "Eleitor não encontrado ou já votou. Nenhum voto foi registrado.";
+                        }
+                    } else {
+                        $conn->rollBack();
+                        $erros[] = "Erro ao atualizar status do eleitor";
+                    }
                 } else {
-                    $erros[] = "Erro ao registar voto";
+                    $conn->rollBack();
+                    $erros[] = "Erro ao registrar voto";
                 }
+                
             } catch(PDOException $e){
+                // Garantir rollback em caso de erro
+                if($conn->inTransaction()) {
+                    $conn->rollBack();
+                }
                 $erros[] = "Erro no banco de dados: " . $e->getMessage();
             }
-        }else{
+        } else {
             $erros[] = "Erro ao conectar com o banco de dados";
-   
         }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -72,6 +102,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <ul>
                             <li><strong>Reitor:</strong> <?php echo htmlspecialchars($reitor); ?></li>
                             <li><strong>Vice:</strong> <?php echo htmlspecialchars($vice); ?></li>
+                            <li><strong>Eleitor:</strong> <?php echo htmlspecialchars($eleitor); ?></li>
                         </ul>
                     </div>
                 <?php endif; ?>

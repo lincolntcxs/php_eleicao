@@ -36,15 +36,6 @@ include 'includes/header.php';
                 </div>
                 
                 <div class="form-group">
-                    <label for="cargo">Cargo (Opcional)</label>
-                    <select id="cargo" name="cargo">
-                        <option value="">Selecione...</option>
-                        <option value="reitor">Reitor</option>
-                        <option value="vice-reitor">Vice-Reitor</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
                     <label for="sexo">Sexo</label>
                     <select id="sexo" name="sexo">
                         <option value="M">Masculino</option>
