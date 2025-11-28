@@ -92,7 +92,7 @@ $imagens_carrossel = [
                     <span class="noticia-data">22 JAN 2026</span>
                     <h3>Inscrições Abertas para o Vestibular 2026</h3>
                     <p>Processo seletivo com 500 vagas disponíveis</p>
-                    <a href="noticia.php?id=1">Ler mais →</a>
+                    <a href="inscricao.php">Increver-se</a>
                 </div>
                 <div class="noticia-card">
                     <span class="noticia-data">20 MAR 2026</span>

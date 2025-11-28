@@ -40,6 +40,13 @@ $servicos = [
         'texto_botao' => 'Ver Agora' // TEXTO DIFERENTE
     ],
     [
+        'icone' => 'fa fa-users',
+        'titulo' => 'Alunos',
+        'descricao' => 'Exibe lista de alunos', 
+        'link' => 'listar_alunos.php', // NOVO LINK
+        'texto_botao' => 'Ver Agora' // TEXTO DIFERENTE
+    ],
+    [
         'icone' => 'fa fa-pie-chart',
         'titulo' => 'Resultado Votação',
         'descricao' => 'Exibe resultado da eleição', 
