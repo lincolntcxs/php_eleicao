@@ -40,6 +40,13 @@ $servicos = [
         'texto_botao' => 'Ver Agora' // TEXTO DIFERENTE
     ],
     [
+        'icone' => 'fa fa-pencil-square', 
+        'titulo' => 'Vestibular',
+        'descricao' => 'Fazer inscrição no vestibular', 
+        'link' => 'inscricao.php', // NOVO LINK
+        'texto_botao' => 'Inscrever-se' // TEXTO DIFERENTE
+    ],
+    [
         'icone' => 'fa fa-users',
         'titulo' => 'Alunos',
         'descricao' => 'Exibe lista de alunos', 
@@ -52,6 +59,13 @@ $servicos = [
         'descricao' => 'Exibe resultado da eleição', 
         'link' => 'resultado.php', // NOVO LINK
         'texto_botao' => 'Ver resultados' // TEXTO DIFERENTE
+    ],
+    [
+        'icone' => 'fa fa-th-list',
+        'titulo' => 'Inscritos no Vestibular',
+        'descricao' => 'Exibe todos inscritos', 
+        'link' => 'listar_vestibulando.php', // NOVO LINK
+        'texto_botao' => 'Ver inscritos' // TEXTO DIFERENTE
     ],
     [
         'icone' => 'fa fa-graduation-cap',

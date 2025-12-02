@@ -13,8 +13,8 @@ include 'includes/header.php';
                 </div>
                 
                 <div class="form-group">
-                    <label for="data">Data de Nascimento *</label>
-                    <input type="text" name="data" required>
+                    <label for="data">Data de Nascimento(AAAA/MM/DD)*</label>
+                    <input type="date" id= "data_nascimento" name="data_nascimento" required>
                 </div>
                 
                 <div class="form-group">
@@ -29,7 +29,7 @@ include 'includes/header.php';
 
                 <div class="form-group">
                     <label for="tel">Telefone </label>
-                    <input type="text" id="tel" name="tel" >
+                    <input type="text" id="telefone" name="telefone" >
                 </div>
 
                 <div class="form-group">

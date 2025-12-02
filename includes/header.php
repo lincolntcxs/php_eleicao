@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="css/style.css">
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="icon" type="image/png" href="/imagens/logo_ufss.jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -28,6 +30,17 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
+                </div>
+                <div class="header-user">
+                <?php if(isset($_SESSION['usuario_id'])): ?>
+                    <div class="user-simple">
+                        <span class="user-greeting">Olá, <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?></span>
+                        <a href="dashboard.php" class="btn-small">Dashboard</a>
+                        <a href="logout.php" class="btn-small logout">Logout</a>
+                    </div>
+                <?php else: ?>
+                    <a href="login.php" class="btn-small">Login</a>
+                <?php endif; ?>
                 </div>
             </div>
         </nav>

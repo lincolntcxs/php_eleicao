@@ -267,6 +267,7 @@
 .acoes .btn.secondary {
     background: #6b7280;
     color: white;
+    margin-bottom: 2rem;
 }
 
 .acoes .btn:last-child {

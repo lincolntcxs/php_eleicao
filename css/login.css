@@ -1,0 +1,71 @@
+.login-form {
+    max-width: 400px;
+    margin: 50px auto;
+    margin-top: 7rem;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.alert.error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c62828;
+}
+
+.logo-login {
+    background: #2c3e50; /* Cor de fundo */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto 25px auto;
+    max-width: 220px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo-login img {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* CSS simplificado */
+.user-simple {
+    display: flex;
+    align-items: right;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+.user-greeting {
+    font-size: 14px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.btn-small {
+    /*padding: 5px 12px;
+    background: #3498db;*/
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+} 
+
+.btn-small:hover {
+    text-decoration: underline;
+}
+
